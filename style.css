@@ -44,7 +44,7 @@ nav ul li{
     margin: 23px auto;
     border-radius: 12px;
     padding: 34px;
-    background-image: url('bg.jpeg');
+    background-image: url('bgp.jpeg');
 }
 .bottom{
     position: sticky;
@@ -67,4 +67,19 @@ nav ul li{
 #myProgressBar{
     width: 80vw;
     
+}
+.songItem{
+    margin-left: -100%;
+    height: 50px;
+    display: flex;
+    background-color: white;
+    width: 90%;
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+.songItem img{
+    width: 43px;
+    margin: 0 23px 0;
 }
