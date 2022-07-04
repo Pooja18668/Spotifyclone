@@ -15,7 +15,7 @@ let songs = [
     {songName: "Kalu de navi hi katha ata raja", filePath: "playlist/3.mp3", coverPath: "covers/3.jpg"},
     {songName: "Dev Martanda,Dev Malhari", filePath: "playlist/4.mp3", coverPath: "covers/4.jpg"},
     {songName: "Deva amcha ragat", filePath: "playlist/5.mp3", coverPath: "covers/5.jpg"},
-    {songName: "Asa ha Dahrmveer", filePath: "playlist/6.mp3", coverPath: "covers/6.jpg"},
+    {songName: "Asa ha Dharmveer", filePath: "playlist/6.mp3", coverPath: "covers/6.jpg"},
     {songName: "Malhari Malhari", filePath: "playlist/7.mp3", coverPath: "covers/7.jpg"},
     {songName: "Shivbache Mavle", filePath: "playlist/8.mp3", coverPath: "covers/8.jpg"},
     {songName: "jay shivaji", filePath: "playlist/9.mp3", coverPath: "covers/9.jpg"},
