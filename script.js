@@ -6,6 +6,7 @@ let audioElement = new Audio('./playlist/1.mp3');
 let masterPlay = document.getElementById('masterPlay');
 let myProgressBar = document.getElementById('myProgressBar');
 let gif = document.getElementById('gif');
+let masterSongName = document.getElementById('masterSongName');
 let songItems = Array.from (document.getElementsByClassName('songItem'));
 
 let songs = [
@@ -76,16 +77,49 @@ Array.from(document.getElementsByClassName("songItemPlay")).forEach((element) =>
     element.addEventListener('click',(e)=>{
         // console.log(e.target);
         makeAllPlays();
-        index = parseInt(e.target.id);
+        songIndex = parseInt(e.target.id);
         e.target.classList.remove('fa-circle-play');
         e.target.classList.add('fa-circle-pause');
-        audioElement.src = `playlist/${index+1}.mp3`;
+        audioElement.src = `playlist/${songIndex+1}.mp3`;
+        masterSongName.innerText = songs[songIndex].songName;
         audioElement.currentTime = 0;
         audioElement.play();
+        gif.style.opacity = 1;
         masterPlay.classList.remove('fa-circle-play');
         masterPlay.classList.add('fa-circle-pause');
     })
+  
+})
+document.getElementById('next').addEventListener('click', ()=>{
+    if(songIndex>=14){
+        songIndex = 0
+    }
+    else{
+        songIndex += 1;
 
+    }
+    audioElement.src = `playlist/${songIndex+1}.mp3`;
+    masterSongName.innerText = songs[songIndex].songName;
+    audioElement.currentTime = 0;
+    audioElement.play();
+    masterPlay.classList.remove('fa-circle-play');
+    masterPlay.classList.add('fa-circle-pause');
     
+})
 
+document.getElementById('prev').addEventListener('click', ()=>{
+    if(songIndex<0){
+        songIndex = 0
+    }
+    else{
+        songIndex -= 1;
+
+    }
+    audioElement.src = `playlist/${songIndex+1}.mp3`;
+    masterSongName.innerText = songs[songIndex].songName;
+    audioElement.currentTime = 0;
+    audioElement.play();
+    masterPlay.classList.remove('fa-circle-play');
+    masterPlay.classList.add('fa-circle-pause');
+    
 })
